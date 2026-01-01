@@ -6,6 +6,9 @@ const login = async (req , res) => {
     try{
         const {email , password} = req.body;
         console.log('Login attempt with email:', email);
+        console.log('Request body type:', typeof req.body, 'keys:', Object.keys(req.body));
+        console.log('Request content-type header:', req.get('content-type'));
+        console.log('Raw request body:', JSON.stringify(req.body));
         
         if (!email || !password) {
             return res.status(400).json({message : "Email and password are required"})
