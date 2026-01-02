@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = 'http://localhost:5000/api';
+const BASE = 'https://backend-ks43.onrender.com/api';
 
 const run = async () => {
   try {
